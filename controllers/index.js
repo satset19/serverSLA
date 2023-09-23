@@ -4,6 +4,7 @@ class Controller {
   static async getUsers(req, res) {
     try {
       const user = await users.find().toArray();
+      console.log(user);
       res.status(200).json({ users: user });
     } catch (error) {
       console.log(error);
